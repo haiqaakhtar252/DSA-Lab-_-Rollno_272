@@ -1,0 +1,40 @@
+namespace LinkedListLabApi.Models
+{
+    // Generic response wrapper
+    public class ApiResponse<T>
+    {
+        public bool Success { get; set; }
+        public string Message { get; set; } = string.Empty;
+        public T? Data { get; set; }
+
+        public static ApiResponse<T> Ok(T data, string message = "Success") =>
+            new() { Success = true, Message = message, Data = data };
+
+        public static ApiResponse<T> Fail(string message) =>
+            new() { Success = false, Message = message, Data = default };
+    }
+
+    public class ValueRequest { public int Value { get; set; } }
+
+    public class InsertPositionRequest
+    {
+        public int Position { get; set; }
+        public int Value { get; set; }
+    }
+
+    public class DeletePositionRequest
+    {
+        public int Position { get; set; }
+    }
+
+    public class SearchRequest
+    {
+        public int Key { get; set; }
+    }
+
+    public class UpdateRequest
+    {
+        public int Position { get; set; }
+        public int NewValue { get; set; }
+    }
+}

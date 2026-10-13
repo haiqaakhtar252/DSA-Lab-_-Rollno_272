@@ -1,0 +1,29 @@
+﻿## .NET Core / Visual Studio
+[Bb]in/
+[Oo]bj/
+*.user
+*.userosscache
+*.suo
+*.userprefs
+.vs/
+.vscode/
+*.DotSettings.user
+
+## Build results
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+build/
+
+## Lab Manuals & Word temp files
+*.docx
+*.doc
+~$*
+Notes/
+Notes/**
+
+## OS Files
+.DS_Store
+Thumbs.db
+desktop.ini
